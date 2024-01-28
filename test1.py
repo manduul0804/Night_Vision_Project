@@ -1,8 +1,8 @@
 import cv2
-import imutils
+
 import numpy as np
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(1)
 
 while cap.isOpened():
     ret, frame = cap.read()
