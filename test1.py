@@ -2,7 +2,7 @@ import cv2
 
 import numpy as np
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -17,9 +17,6 @@ while cap.isOpened():
     gaussianblur = cv2.GaussianBlur(frame, (5,5), 0)
     gray = cv2.cvtColor(gaussianblur, cv2.COLOR_BGR2GRAY)
     cv2.imshow('gblur', gray)
-
-    
-    
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
